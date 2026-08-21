@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:#f5f7fa;
+}
+
+.header{
+background:#081425;
+color:white;
+padding:40px;
+text-align:center;
+}
+
+.gallery{
+padding:40px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.card h3{
+padding:15px;
+text-align:center;
+color:#081425;
+}
+
+footer{
+background:#081425;
+color:white;
+text-align:center;
+padding:20px;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+<h1>College Gallery</h1>
+<p>Campus • Labs • Events • Classrooms</p>
+</div>
+
+<div class="gallery">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1200">
+<h3>College Campus</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1200">
+<h3>Classroom</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1200">
+<h3>Computer Lab</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200">
+<h3>Science Laboratory</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200">
+<h3>Annual Function</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200">
+<h3>Library</h3>
+</div>
+
+</div>
+
+<footer>
+© Shivaji English School & Junior College
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Events</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:#f4f6f9;
+}
+
+.header{
+background:#081425;
+color:white;
+padding:50px;
+text-align:center;
+}
+
+.events{
+padding:40px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
+}
+
+.event-card{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.event-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.content{
+padding:20px;
+}
+
+.content h3{
+color:#081425;
+margin-bottom:10px;
+}
+
+.date{
+color:#d4a437;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+footer{
+background:#081425;
+color:white;
+text-align:center;
+padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+<h1>College Events</h1>
+<p>Latest Activities & Celebrations</p>
+</div>
+
+<div class="events">
+
+<div class="event-card">
+<img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200">
+<div class="content">
+<div class="date">15 August 2026</div>
+<h3>Independence Day Celebration</h3>
+<p>Flag hoisting, cultural programs and student performances.</p>
+</div>
+</div>
+
+<div class="event-card">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200">
+<div class="content">
+<div class="date">10 January 2026</div>
+<h3>Annual Gathering</h3>
+<p>Music, dance and prize distribution ceremony.</p>
+</div>
+</div>
+
+<div class="event-card">
+<img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=1200">
+<div class="content">
+<div class="date">5 February 2026</div>
+<h3>Science Exhibition</h3>
+<p>Innovative student projects and technology showcase.</p>
+</div>
+</div>
+
+</div>
+
+<footer>
+© Shivaji English School & Junior College
+</footer>
+
+</body>
+</html>
