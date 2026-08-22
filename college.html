@@ -35,6 +35,10 @@ header{
     align-items:center;
     padding:15px 50px;
 }
+    .navbar{
+    flex-direction:row !important;
+    overflow-x:auto;
+    }
 
 .logo h2{
     color:white;
@@ -68,12 +72,17 @@ nav ul li a{
     transition:0.3s;
 }
 
-nav ul li{
-    flex-shrink:0;
+nav ul{
+    display:flex;
+    flex-wrap:nowrap !important;
+    overflow-x:auto;
+    justify-content:flex-start;
+    gap:20px;
+    white-space:nowrap;
 }
 
-nav ul li a{
-    white-space:nowrap;
+nav ul::-webkit-scrollbar{
+    display:none;
 }
 
 .hero{
