@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shivaji College Login Portal</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url("https://images.unsplash.com/photo-1562774053-701939374585?w=1920");
+
+background-size:cover;
+background-position:center;
+}
+
+.login-box{
+width:550px;
+background:rgba(255,255,255,.10);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.2);
+padding:40px;
+border-radius:25px;
+box-shadow:0 15px 40px rgba(0,0,0,.4);
+color:white;
+}
+
+.college-name{
+text-align:center;
+margin-bottom:25px;
+}
+
+.college-name h2{
+font-size:30px;
+font-weight:700;
+}
+
+.college-name p{
+color:#d4a437;
+font-size:14px;
+margin-top:5px;
+}
+
+.portal-title{
+text-align:center;
+font-size:38px;
+font-weight:700;
+margin-bottom:25px;
+}
+
+.tabs{
+display:flex;
+gap:10px;
+margin-bottom:25px;
+}
+
+.tab{
+flex:1;
+padding:14px;
+border:none;
+border-radius:10px;
+background:#1b3152;
+color:white;
+font-weight:600;
+cursor:pointer;
+}
+
+.tab.active{
+background:#d4a437;
+color:black;
+}
+
+input[type=text],
+input[type=email],
+input[type=password]{
+width:100%;
+padding:15px;
+border:none;
+outline:none;
+border-radius:10px;
+margin-bottom:15px;
+font-size:15px;
+}
+
+.options{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:20px;
+}
+
+.remember{
+display:flex;
+align-items:center;
+gap:8px;
+font-size:14px;
+}
+
+.remember input{
+width:18px;
+height:18px;
+}
+
+.options a{
+text-decoration:none;
+color:#d4a437;
+font-size:14px;
+}
+
+.login-btn{
+width:100%;
+padding:15px;
+border:none;
+border-radius:10px;
+background:#d4a437;
+font-size:17px;
+font-weight:700;
+cursor:pointer;
+}
+
+.login-btn:hover{
+opacity:.9;
+}
+
+.divider{
+text-align:center;
+margin:25px 0;
+font-size:22px;
+font-weight:bold;
+}
+
+.admin-btn{
+width:100%;
+padding:15px;
+border:none;
+border-radius:10px;
+background:#081425;
+color:white;
+font-size:16px;
+font-weight:700;
+cursor:pointer;
+}
+
+.admin-btn:hover{
+background:#10294a;
+}
+
+@media(max-width:600px){
+
+.login-box{
+width:100%;
+padding:25px;
+}
+
+.portal-title{
+font-size:30px;
+}
+
+.college-name h2{
+font-size:22px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
+
+<div class="college-name">
+<h2>SHIVAJI ENGLISH SCHOOL</h2>
+<p>& JUNIOR COLLEGE OF ARTS, COMMERCE & SCIENCE</p>
+</div>
+
+<div class="portal-title">
+LOGIN PORTAL
+</div>
+
+<div class="tabs">
+
+<button onclick="showForm('student',this)"
+class="tab active">
+Students
+</button>
+
+<button onclick="showForm('teacher',this)"
+class="tab">
+Teachers
+</button>
+
+<button onclick="showForm('visitor',this)"
+class="tab">
+Visitors
+</button>
+
+</div>
+
+<!-- Student -->
+
+<form id="studentForm">
+
+<input type="text" placeholder="Student Name" required>
+
+<input type="email" placeholder="Student Email" required>
+
+<input type="password" placeholder="Password" required>
+
+<div class="options">
+
+<label class="remember">
+<input type="checkbox">
+<span>Remember Me</span>
+</label>
+
+<a href="forgot-password.html">
+Forgot Password?
+</a>
+
+</div>
+
+<button class="login-btn" type="submit">
+LOGIN
+</button>
+
+</form>
+
+<!-- Teacher -->
+
+<form id="teacherForm" style="display:none;">
+
+<input type="text" placeholder="Teacher Name" required>
+
+<input type="email" placeholder="Teacher Email" required>
+
+<input type="password" placeholder="Password" required>
+
+<div class="options">
+
+<label class="remember">
+<input type="checkbox">
+<span>Remember Me</span>
+</label>
+
+<a href="forgot-password.html">
+Forgot Password?
+</a>
+
+</div>
+
+<button class="login-btn" type="submit">
+LOGIN
+</button>
+
+</form>
+
+<!-- Visitor -->
+
+<form id="visitorForm" style="display:none;">
+
+<input type="text" placeholder="Visitor Name" required>
+
+<input type="email" placeholder="Visitor Email" required>
+
+<input type="password" placeholder="Password" required>
+
+<div class="options">
+
+<label class="remember">
+<input type="checkbox">
+<span>Remember Me</span>
+</label>
+
+<a href="forgot-password.html">
+Forgot Password?
+</a>
+
+</div>
+
+<button class="login-btn" type="submit">
+LOGIN
+</button>
+
+</form>
+
+<div class="divider">
+OR
+</div>
+
+<button
+class="admin-btn"
+onclick="window.location.href='admin-login.html'">
+
+ADMIN LOGIN
+
+</button>
+
+</div>
+
+<script>
+  
+document.getElementById("studentForm")
+.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+window.location.href="college.html";
+
+});
+
+document.getElementById("teacherForm")
+.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+window.location.href="college.html";
+
+});
+
+document.getElementById("visitorForm")
+.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+window.location.href="college.html";
+
+});
+
+function showForm(type,btn){
+
+document.getElementById("studentForm").style.display="none";
+document.getElementById("teacherForm").style.display="none";
+document.getElementById("visitorForm").style.display="none";
+
+document.querySelectorAll(".tab").forEach(tab=>{
+tab.classList.remove("active");
+});
+
+btn.classList.add("active");
+
+if(type==="student"){
+document.getElementById("studentForm").style.display="block";
+}
+
+if(type==="teacher"){
+document.getElementById("teacherForm").style.display="block";
+}
+
+if(type==="visitor"){
+document.getElementById("visitorForm").style.display="block";
+}
+
+}
+
+</script>
+
+</body>
+</html>
