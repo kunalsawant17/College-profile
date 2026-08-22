@@ -49,6 +49,20 @@ header{
     color:#d4a437;
     font-size:11px;
 }
+    nav{
+    width:100%;
+    overflow-x:auto;
+}
+
+nav ul{
+    display:flex !important;
+    flex-wrap:nowrap !important;
+    justify-content:flex-start !important;
+    align-items:center;
+    overflow-x:auto;
+    white-space:nowrap;
+    width:max-content;
+}
 
 nav ul{
     display:flex;
@@ -230,8 +244,7 @@ nav ul::-webkit-scrollbar{
 @media(max-width:900px){
 
 .navbar{
-    flex-direction:column;
-    gap:15px;
+    flex-direction:row !important;
 }
 
 nav ul{
