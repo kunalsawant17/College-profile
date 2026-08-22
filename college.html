@@ -24,59 +24,85 @@ header{
     background:#04101f;
     border-bottom:2px solid #d4a437;
     position:fixed;
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#081425;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    background:#04101f;
+    border-bottom:2px solid #d4a437;
+    position:fixed;
     width:100%;
     top:0;
+    left:0;
     z-index:1000;
 }
+
+/* ================= NAVBAR ================= */
 
 .navbar{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px 50px;
+    padding:14px 50px;
+    gap:30px;
 }
-    .navbar{
-    flex-direction:row !important;
-    overflow-x:auto;
-    }
+
+/* LOGO */
+
+.logo{
+    flex-shrink:0;
+}
 
 .logo h2{
     color:white;
     font-size:24px;
+    line-height:1.1;
 }
 
 .logo p{
     color:#d4a437;
     font-size:11px;
-}
-    nav{
-    width:100%;
-    overflow-x:auto;
+    margin-top:3px;
 }
 
-nav ul{
-    display:flex !important;
-    flex-wrap:nowrap !important;
-    justify-content:flex-start !important;
-    align-items:center;
-    overflow-x:auto;
-    white-space:nowrap;
-    width:max-content;
+/* ================= NAV ================= */
+
+nav{
+    flex:1;
+    min-width:0;
 }
 
 nav ul{
     display:flex;
-    flex-wrap:nowrap;
-    overflow-x:auto;
-    gap:20px;
+    align-items:center;
+    justify-content:flex-end;
+    gap:28px;
     list-style:none;
-    padding-bottom:5px;
+    white-space:nowrap;
+    overflow-x:auto;
+    padding:5px 2px;
+    scrollbar-width:none;
 }
 
 nav ul::-webkit-scrollbar{
     display:none;
 }
 
+nav ul li{
+    flex-shrink:0;
+}
 
 nav ul li a{
     text-decoration:none;
@@ -84,32 +110,32 @@ nav ul li a{
     font-size:14px;
     font-weight:500;
     transition:0.3s;
+    display:block;
+    padding:8px 2px;
 }
 
-nav ul{
-    display:flex;
-    flex-wrap:nowrap !important;
-    overflow-x:auto;
-    justify-content:flex-start;
-    gap:20px;
-    white-space:nowrap;
+nav ul li a:hover{
+    color:#d4a437;
 }
 
-nav ul::-webkit-scrollbar{
-    display:none;
-}
+/* ================= HERO ================= */
 
 .hero{
-    height:100vh;
+    min-height:100vh;
     background:
-    linear-gradient(rgba(0,0,0,0.55),
-    rgba(0,0,0,0.55)),
+    linear-gradient(
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.55)
+    ),
     url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1920");
+
     background-size:cover;
     background-position:center;
+
     display:flex;
     align-items:center;
-    padding:100px;
+
+    padding:120px 100px 80px;
 }
 
 .hero-content{
@@ -139,6 +165,117 @@ nav ul::-webkit-scrollbar{
     margin-top:20px;
     font-size:18px;
     line-height:1.7;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width:768px){
+
+    header{
+        position:fixed;
+    }
+
+    .navbar{
+        flex-direction:column;
+        align-items:stretch;
+        padding:10px 0 6px;
+        gap:5px;
+    }
+
+    .logo{
+        text-align:center;
+        padding:3px 15px 5px;
+    }
+
+    .logo h2{
+        font-size:20px;
+    }
+
+    .logo p{
+        font-size:9px;
+    }
+
+    nav{
+        width:100%;
+        overflow:hidden;
+    }
+
+    nav ul{
+        justify-content:flex-start;
+        gap:22px;
+        padding:4px 18px 7px;
+        overflow-x:auto;
+        overflow-y:hidden;
+        -webkit-overflow-scrolling:touch;
+    }
+
+    nav ul li a{
+        font-size:12px;
+        padding:7px 0;
+    }
+
+    /* HERO MOBILE */
+
+    .hero{
+        min-height:100vh;
+        padding:150px 30px 60px;
+        background-position:center;
+    }
+
+    .hero-content{
+        max-width:100%;
+    }
+
+    .hero-content span{
+        font-size:14px;
+    }
+
+    .hero-content h1{
+        font-size:42px;
+        line-height:1.08;
+    }
+
+    .hero-content h2{
+        font-size:20px;
+        line-height:1.4;
+    }
+
+    .hero-content p{
+        font-size:15px;
+        line-height:1.6;
+    }
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width:400px){
+
+    .logo h2{
+        font-size:18px;
+    }
+
+    nav ul{
+        gap:20px;
+        padding-left:15px;
+        padding-right:15px;
+    }
+
+    nav ul li a{
+        font-size:11px;
+    }
+
+    .hero{
+        padding-left:25px;
+        padding-right:25px;
+    }
+
+    .hero-content h1{
+        font-size:38px;
+    }
+
+    .hero-content h2{
+        font-size:18px;
+    }
 }
 
 .btn{
