@@ -48,9 +48,17 @@ header{
 
 nav ul{
     display:flex;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    gap:20px;
     list-style:none;
-    gap:25px;
+    padding-bottom:5px;
 }
+
+nav ul::-webkit-scrollbar{
+    display:none;
+}
+
 
 nav ul li a{
     text-decoration:none;
@@ -60,8 +68,12 @@ nav ul li a{
     transition:0.3s;
 }
 
-nav ul li a:hover{
-    color:#d4a437;
+nav ul li{
+    flex-shrink:0;
+}
+
+nav ul li a{
+    white-space:nowrap;
 }
 
 .hero{
